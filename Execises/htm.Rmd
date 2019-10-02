@@ -117,7 +117,7 @@ add_count(name, wt = n) %>%
 filter(n >=5) %>% 
 mutate(name = fct_reorder(name, n, sum)) %>% 
 
-ggplot(aes(name, n, fill = gender )) +
+ggplot(aes(reorder(name,-n), n, fill = gender )) +
 
 geom_col() +
   
